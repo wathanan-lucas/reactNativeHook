@@ -8,7 +8,7 @@ from "react-native";
 
 export default function App() {
   
-  const [texto, setTexto] = useState('Olá, React Native!!')
+  const [texto, setTexto] = useState(0)
   
   return(
     <View style={{width: '100%', alignItems: 'center', padding: 20}}>
@@ -17,7 +17,11 @@ export default function App() {
       </Text>
       <Button style={{width: '100%'}}
         title="OK"
-        onPress={() => setTexto("Olá, React Native atualizado!")}
+        onPress={() => setTexto(texto + 1)}
+      />
+      <Button style={{width: '100%'}}
+        title="Resetar"
+        onPress={() => setTexto(0)}
       />
     </View>
   )
